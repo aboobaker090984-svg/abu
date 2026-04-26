@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo123.png';
 
 const Loader = ({ finishLoading }) => {
   const [counter, setCounter] = useState(0);
@@ -55,11 +54,13 @@ const Loader = ({ finishLoading }) => {
           }}
           className="mb-8"
         >
-          <img 
-            src={logo} 
-            alt="Naadan Chaya Logo" 
-            className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_15px_rgba(217,119,6,0.3)]"
-          />
+          <div className="w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-amber-800/30 shadow-2xl shadow-amber-900/40">
+            <img 
+              src={logo} 
+              alt="Naadan Chaya Official Logo" 
+              className="w-full h-full object-cover scale-150" 
+            />
+          </div>
         </motion.div>
 
         {/* Text Animation */}
