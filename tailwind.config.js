@@ -8,14 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'tea-gold': '#000000',
-        'coconut-green': '#000000',
-        'coconut-green-light': '#000000',
-        'earthy-brown': '#000000',
-        'banana-leaf': '#333333',
-        'clay-red': '#666666',
-        'charcoal': '#000000',
-        'misty-white': '#ffffff',
+        'tea-gold': '#d97706',
+        'coconut-green': '#15803d',
+        'coconut-green-light': '#22c55e',
+        'earthy-brown': '#78350f',
+        'banana-leaf': '#4ade80',
+        'clay-red': '#b91c1c',
+        'charcoal': '#08060d',
+        'misty-white': '#f8f9fa',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
