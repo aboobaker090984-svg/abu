@@ -56,7 +56,7 @@ const Hero = () => {
       </div>
 
       {/* Small Floating Buttons in Corner */}
-      <div className="absolute bottom-12 right-12 z-20 flex flex-col md:flex-row items-center gap-4 gsap-fade-up">
+      <div className="absolute bottom-12 left-12 z-20 flex flex-col md:flex-row items-center gap-4 gsap-fade-up">
         <a href="#menu" className="group flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full text-sm font-bold hover:bg-amber-800 hover:text-white transition-all duration-500 shadow-xl">
           Menu
           <div className="w-5 h-5 rounded-full bg-black/10 group-hover:bg-white/20 flex items-center justify-center text-xs transition-colors">
