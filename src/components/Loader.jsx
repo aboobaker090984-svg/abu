@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo123.png';
 
 const Loader = ({ finishLoading }) => {
   const [counter, setCounter] = useState(0);
@@ -40,27 +39,73 @@ const Loader = ({ finishLoading }) => {
       </div>
 
       <div className="relative z-10 flex flex-col items-center">
-        {/* Animated Logo */}
+        {/* Animated Tea Cup SVG */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ 
-            scale: [0.8, 1.05, 1],
-            opacity: 1 
-          }}
-          transition={{ 
-            duration: 1.5, 
-            ease: "easeOut",
-            times: [0, 0.7, 1]
-          }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-amber-800/30 shadow-2xl shadow-amber-900/40">
-            <img 
-              src={logo} 
-              alt="Naadan Chaya Official Logo" 
-              className="w-full h-full object-cover scale-150" 
+          <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Cup Body */}
+            <motion.path
+              d="M30 40H70V70C70 81.0457 61.0457 90 50 90C38.9543 90 30 81.0457 30 70V40Z"
+              stroke="#d97706"
+              strokeWidth="2"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
             />
-          </div>
+            {/* Cup Handle */}
+            <motion.path
+              d="M70 50C70 50 85 50 85 62C85 74 70 74 70 74"
+              stroke="#d97706"
+              strokeWidth="2"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+            />
+            {/* Steam 1 */}
+            <motion.path
+              d="M40 30C40 30 35 20 40 10"
+              stroke="#d97706"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              animate={{ 
+                y: [0, -10], 
+                opacity: [0, 1, 0],
+                pathLength: [0, 1]
+              }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            />
+            {/* Steam 2 */}
+            <motion.path
+              d="M50 25C50 25 45 15 50 5"
+              stroke="#d97706"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              animate={{ 
+                y: [0, -12], 
+                opacity: [0, 1, 0],
+                pathLength: [0, 1]
+              }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: "linear", delay: 0.4 }}
+            />
+            {/* Steam 3 */}
+            <motion.path
+              d="M60 30C60 30 55 20 60 10"
+              stroke="#d97706"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              animate={{ 
+                y: [0, -10], 
+                opacity: [0, 1, 0],
+                pathLength: [0, 1]
+              }}
+              transition={{ duration: 1.8, repeat: Infinity, ease: "linear", delay: 0.8 }}
+            />
+          </svg>
         </motion.div>
 
         {/* Text Animation */}
