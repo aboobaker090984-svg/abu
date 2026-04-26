@@ -55,18 +55,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Small Floating Buttons in Corner */}
-      <div className="absolute bottom-8 left-12 z-20 flex flex-col md:flex-row items-center gap-3 gsap-fade-up">
-        <a href="#menu" className="group flex items-center gap-2 bg-white text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-amber-800 hover:text-white transition-all duration-500 shadow-xl">
-          Menu
-          <div className="w-4 h-4 rounded-full bg-black/10 group-hover:bg-white/20 flex items-center justify-center text-[10px] transition-colors">
-            →
-          </div>
-        </a>
-        <a href="#about" className="px-5 py-2 rounded-full text-xs font-bold text-white border border-white/20 hover:bg-white/5 transition-all backdrop-blur-sm">
-          Our Story
-        </a>
-      </div>
+
     </section >
   );
 };
