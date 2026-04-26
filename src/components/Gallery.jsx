@@ -8,12 +8,6 @@ import mmm from '../assets/mmm.png';
 import nnn from '../assets/nnn.png';
 import ttt from '../assets/ttt.png';
 import uuu from '../assets/uuu.png';
-import vvv from '../assets/vvv.png';
-import aaa from '../assets/aaa.jpg';
-import bbb from '../assets/bbb.jpg';
-import ccc from '../assets/ccc.jpg';
-import ddd from '../assets/ddd.jpg';
-import eee from '../assets/eee.jpg';
 
 const Gallery = () => {
   const images = [
@@ -26,12 +20,6 @@ const Gallery = () => {
     { url: nnn, title: 'Our Heritage' },
     { url: ttt, title: 'Golden Hour' },
     { url: uuu, title: 'Fresh & Tasty' },
-    { url: vvv, title: 'Nostalgic Bites' },
-    { url: aaa, title: 'Local Delights' },
-    { url: bbb, title: 'Street Treats' },
-    { url: ccc, title: 'Evening Chai' },
-    { url: ddd, title: 'Foodie Favorites' },
-    { url: eee, title: 'Authentic Kitchen' },
   ];
 
   return (

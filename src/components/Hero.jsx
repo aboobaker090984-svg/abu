@@ -51,26 +51,21 @@ const Hero = () => {
             <p className="gsap-fade-up text-lg text-gray-400 max-w-sm leading-relaxed">
               Bringing the legendary flavors of Vazhakkad to the modern world. Every cup is a masterpiece of tradition and <span className="text-white italic">sukoon</span>.
             </p>
-
-            <div className="gsap-fade-up flex flex-wrap gap-6">
-              <a href="#menu" className="group flex items-center gap-4 bg-white text-black px-10 py-5 rounded-full font-bold hover:bg-amber-800 hover:text-white transition-all duration-500">
-                Menu
-                <div className="w-6 h-6 rounded-full bg-black/10 group-hover:bg-white/20 flex items-center justify-center transition-colors">
-                  →
-                </div>
-              </a>
-              <a href="#about" className="px-10 py-5 rounded-full font-bold text-white border border-white/20 hover:bg-white/5 transition-all">
-                Our Story
-              </a>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Modern Scroll Cue */}
-      <div className="absolute bottom-12 right-12 flex items-center gap-4 rotate-90 origin-right text-white/20 hidden md:flex">
-        <span className="text-[10px] uppercase tracking-[0.5em] font-black">Scroll to explore</span>
-        <div className="w-20 h-px bg-white/20" />
+      {/* Small Floating Buttons in Corner */}
+      <div className="absolute bottom-12 right-12 z-20 flex flex-col md:flex-row items-center gap-4 gsap-fade-up">
+        <a href="#menu" className="group flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full text-sm font-bold hover:bg-amber-800 hover:text-white transition-all duration-500 shadow-xl">
+          Menu
+          <div className="w-5 h-5 rounded-full bg-black/10 group-hover:bg-white/20 flex items-center justify-center text-xs transition-colors">
+            →
+          </div>
+        </a>
+        <a href="#about" className="px-6 py-3 rounded-full text-sm font-bold text-white border border-white/20 hover:bg-white/5 transition-all backdrop-blur-sm">
+          Our Story
+        </a>
       </div>
     </section >
   );

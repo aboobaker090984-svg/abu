@@ -4,9 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const useGSAPAnimations = () => {
+export const useGSAPAnimations = (isLoading) => {
   useEffect(() => {
-    // Small delay to ensure DOM is ready
+    if (isLoading) return;
+
+    // Small delay to ensure DOM is ready and loader animation is finished
     const timer = setTimeout(() => {
 
       // Fade up on scroll
@@ -111,5 +113,5 @@ export const useGSAPAnimations = () => {
       clearTimeout(timer);
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
-  }, []);
+  }, [isLoading]);
 };

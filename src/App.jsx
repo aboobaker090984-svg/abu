@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/global.css';
 import { useGSAPAnimations } from './hooks/useGSAPAnimations';
 import Header from './components/Header';
@@ -12,10 +12,15 @@ import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import SukoonVibe from './components/SukoonVibe';
 import Chatbot from './components/Chatbot';
+import Loader from './components/Loader';
+import CustomCursor from './components/CustomCursor';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const [theme, setTheme] = useState('light');
-  useGSAPAnimations();
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useGSAPAnimations(isLoading);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -23,24 +28,37 @@ function App() {
     document.documentElement.setAttribute('data-theme', newTheme);
   };
 
+  const finishLoading = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="app">
-      {/* Premium Overlays */}
-      <div className="fixed inset-0 pointer-events-none z-[9998] opacity-[0.03] noise-overlay" />
-      
-      <Header toggleTheme={toggleTheme} theme={theme} />
-      <main>
-        <Hero />
-        <About />
-        <SukoonVibe />
-        <Menu />
-        <Gallery />
-        <Reviews />
-        <Contact />
-        <CTASection />
-      </main>
-      <Footer />
-      <Chatbot />
+      <AnimatePresence mode="wait">
+        {isLoading && <Loader finishLoading={finishLoading} />}
+      </AnimatePresence>
+
+      {!isLoading && (
+        <>
+          <CustomCursor />
+          {/* Premium Overlays */}
+          <div className="fixed inset-0 pointer-events-none z-[9998] opacity-[0.03] noise-overlay" />
+          
+          <Header toggleTheme={toggleTheme} theme={theme} />
+          <main>
+            <Hero />
+            <About />
+            <SukoonVibe />
+            <Menu />
+            <Gallery />
+            <Reviews />
+            <Contact />
+            <CTASection />
+          </main>
+          <Footer />
+          <Chatbot />
+        </>
+      )}
     </div>
   );
 }
