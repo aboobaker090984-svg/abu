@@ -42,7 +42,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Epic Headline */}
-          <h1 className="gsap-fade-up text-6xl md:text-[10rem] font-normal text-white mb-8 leading-[0.85] tracking-tighter" style={{ fontFamily: "'Fraunces', serif" }}>
+          <h1 className="gsap-fade-up text-5xl md:text-[10rem] font-normal text-white mb-8 leading-[0.85] tracking-tighter" style={{ fontFamily: "'Fraunces', serif" }}>
             Nadan aanu,<br />
             <span className="text-amber-600 italic">ellaam</span>
           </h1>

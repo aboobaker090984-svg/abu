@@ -13,7 +13,6 @@ import Footer from './components/Footer';
 import SukoonVibe from './components/SukoonVibe';
 import Chatbot from './components/Chatbot';
 import Loader from './components/Loader';
-import CustomCursor from './components/CustomCursor';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
@@ -40,7 +39,6 @@ function App() {
 
       {!isLoading && (
         <>
-          <CustomCursor />
           {/* Premium Overlays */}
           <div className="fixed inset-0 pointer-events-none z-[9998] opacity-[0.03] noise-overlay" />
           

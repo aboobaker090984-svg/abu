@@ -11,6 +11,8 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
@@ -19,6 +21,8 @@
     color: #1a1a1a;
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
     transition: background-color 0.5s ease, color 0.5s ease;
   }
 
