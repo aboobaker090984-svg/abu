@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import heroVideo from '../assets/herosectionvideo.mp4';
+import logo from '../assets/logo123.png';
 
 const Hero = () => {
   return (
@@ -31,6 +32,16 @@ const Hero = () => {
 
       <div className="container relative z-10 pt-20">
         <div className="max-w-3xl">
+          {/* Brand Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mb-6 border-2 border-amber-800/30"
+          >
+            <img src={logo} alt="Logo" className="w-full h-full object-cover scale-150" />
+          </motion.div>
+
           {/* Subtle Label */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
